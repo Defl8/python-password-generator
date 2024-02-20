@@ -13,9 +13,12 @@ def random_choice(sequence):
     return random.choice(sequence)
 
 
+# Randomly chooses char set to add to password
 while len(password) < int(len_password):
+
     sequence_choice = random.randint(1, 4)
-    match sequence_choice:
+
+    match sequence_choice:  # Adds random char from set to password
         case 1:
             password += random_choice(letters_lower)
         case 2:
