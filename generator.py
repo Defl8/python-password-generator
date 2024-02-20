@@ -1,9 +1,10 @@
 import random
 
-letters_lower = "abcdefghijklmnopqrstuvwxyz"
-letters_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-nums = "1234567890"
-chars = "!@#$%^&*()_+{}:;?"
+LETTERS_LOWER = "abcdefghijklmnopqrstuvwxyz"
+LETTERS_UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+NUMBERS = "1234567890"
+EXTRA_CHARACTERS = "!@#$%^&*()_+{}:;?"
+
 password = ""
 
 len_password = input("Please the desired password length: ")
@@ -20,12 +21,12 @@ while len(password) < int(len_password):
 
     match sequence_choice:  # Adds random char from set to password
         case 1:
-            password += random_choice(letters_lower)
+            password += random_choice(LETTERS_LOWER)
         case 2:
-            password += random_choice(letters_upper)
+            password += random_choice(LETTERS_UPPER)
         case 3:
-            password += random_choice(nums)
+            password += random_choice(NUMBERS)
         case 4:
-            password += random_choice(chars)
+            password += random_choice(EXTRA_CHARACTERS)
 
 print(f"Your generated password is: {password}")
